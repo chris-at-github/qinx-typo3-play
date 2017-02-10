@@ -1,0 +1,123 @@
+// Header
+// ---------------------------------------------------------------------------------------------------------------------
+#header {
+	& {
+		@extend .background--white;
+	}
+
+	.inner {
+		position: relative;
+		height: 50px;
+	}
+
+	& + .ce-white {
+		margin-top: 2px;
+	}
+}
+
+#logo {
+	a {
+		& {
+			position: absolute;
+			top: 0;
+			left: 10px;
+			display: block;
+			width: 50px;
+			line-height: 50px;
+			font-size: 20px;
+		}
+
+		&:before {
+			content: '';
+			position: relative;
+			top: -2px;
+			@include sprite(logo-small);
+			vertical-align: middle;
+			opacity: 1;
+		}
+	}
+
+	img {
+		display: none;
+	}
+}
+
+#header--search {
+	form {
+		margin: 15px 0;
+	}
+}
+
+#header--actions {
+	display: none;
+}
+
+// Navigation
+// ---------------------------------------------------------------------------------------------------------------------
+#navigation-main {
+	& {
+		display: none;
+	}
+
+	a {
+		& {
+			color: darken($grey, 20%);
+		}
+
+		&:hover, &:focus {
+			color: $grey-dark;
+		}
+	}
+
+	.navigation {
+		& > ul > li {
+			& > a {
+				padding: 0 10px;
+				line-height: 70px;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+		}
+
+		& > ul > li > ul {
+			& {
+				top: 70px;
+			}
+
+			& > li {
+				& > a {
+					padding: 2px 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-sm) {
+	#header {
+		.inner {
+			height: 70px;
+		}
+	}
+
+	#logo {
+		a {
+			& {
+				position: relative;
+				left: 0;
+				width: auto;
+				line-height: 70px;
+			}
+
+			&:before {
+				@include sprite(logo);
+			}
+		}
+	}
+
+	#navigation-main {
+		& {
+			display: block;
+		}
+	}
+}

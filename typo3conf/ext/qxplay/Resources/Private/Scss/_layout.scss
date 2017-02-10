@@ -1,0 +1,110 @@
+// Default
+// ---------------------------------------------------------------------------------------------------------------------
+.outer {
+	& {
+		max-width: 100%;
+	}
+}
+
+.inner {
+	max-width: 100%;
+}
+
+.indent-normal {
+	padding: 0 10px;
+}
+
+// Content Elements
+// ---------------------------------------------------------------------------------------------------------------------
+.ce-outer {
+	& {
+		@extend .outer;
+	}
+
+	&:before, &:after {
+		content: '';
+		display: table;
+	}
+}
+
+.ce-inner {
+	@extend .inner;
+}
+
+// Colors
+// ---------------------------------------------------------------------------------------------------------------------
+.ce-white {
+	@extend .background--white;
+}
+
+.ce-grey {
+	@extend .background--grey;
+}
+
+.ce-grey-dark {
+	@extend .background--grey-dark;
+}
+
+// Spacing
+// ---------------------------------------------------------------------------------------------------------------------
+.ce-white {
+	& + .ce-grey {
+		&:before {
+			width: 100%;
+			height: 25px;
+			@extend .background--white;
+		}
+
+		.ce-inner {
+			margin-top: 25px;
+		}
+	}
+}
+
+.ce-grey {
+	& + .ce-white {
+		&:before {
+			width: 100%;
+			height: 25px;
+			@extend .background--grey;
+		}
+
+		.ce-inner {
+			margin-top: 25px;
+		}
+	}
+}
+
+// Responsive
+// ---------------------------------------------------------------------------------------------------------------------
+@media screen and (min-width: $breakpoint-md) {
+	.indent-normal {
+		max-width: $page-width-md;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.ce-white {
+		& + .ce-grey {
+			&:before {
+				height: 35px;
+			}
+
+			.ce-inner {
+				margin-top: 35px;
+			}
+		}
+	}
+
+	.ce-grey {
+		& + .ce-white {
+			&:before {
+				height: 35px;
+			}
+
+			.ce-inner {
+				margin-top: 35px;
+			}
+		}
+	}
+}

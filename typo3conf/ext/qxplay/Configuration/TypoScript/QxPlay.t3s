@@ -1,0 +1,24 @@
+plugin.tx_qxplay {
+	view {
+		layoutRootPaths {
+			10 = {$plugin.tx_qxplay.view.layoutRootPath}
+			20 = {$folders.layouts}
+		}
+
+		templateRootPaths {
+			10 = {$plugin.tx_qxplay.view.templateRootPath}
+			20 = {$folders.templates}
+		}
+
+		partialRootPaths {
+			10 = {$plugin.tx_qxplay.view.partialRootPath}
+			20 = {$folders.partials}
+		}
+	}
+}
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxplay/Configuration/TypoScript/Config/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxplay/Configuration/TypoScript/System/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxplay/Configuration/TypoScript/Navigation/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxplay/Configuration/TypoScript/Block/" extensions="t3s">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:qxplay/Configuration/TypoScript/Page/" extensions="t3s">

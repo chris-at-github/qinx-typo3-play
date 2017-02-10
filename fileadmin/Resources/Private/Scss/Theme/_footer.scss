@@ -1,0 +1,16 @@
+// Footer
+// ---------------------------------------------------------------------------------------------------------------------
+#footer {
+	margin-top: 4px;
+	display: none;
+}
+
+#navigation-footer {
+	.navigation {
+		@include clearfix();
+	}
+
+	ul {
+		float: right;
+	}
+}

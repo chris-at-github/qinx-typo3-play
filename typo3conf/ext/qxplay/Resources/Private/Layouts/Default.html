@@ -1,0 +1,21 @@
+<div id="header" class="outer">
+	<div class="inner indent-normal">
+		<div class="row">
+			<div id="logo" class="col-xs-12 col-sm-3">
+				<f:cObject typoscriptObjectPath="lib.logo" />
+			</div>
+			<div id="navigation-main" class="col-xs-12 col-sm-9"><f:cObject typoscriptObjectPath="navigation.main" /></div>
+		</div>
+	</div>
+</div>
+
+<f:render section="Content" />
+
+<div id="footer" class="outer">
+	<div class="inner">
+		<div class="row">
+			<div id="copyright" class="col-xs-12 col-sm-4"><f:cObject typoscriptObjectPath="lib.copyright" /></div>
+			<div id="navigation-footer" class="col-xs-12 col-sm-8"><f:cObject typoscriptObjectPath="navigation.footer" /></div>
+		</div>
+	</div>
+</div>

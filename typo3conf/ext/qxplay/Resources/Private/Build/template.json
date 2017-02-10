@@ -1,0 +1,4 @@
+{
+{{#shapes}} 	{{base}}: {width: {{width.inner}}, height: {{height.inner}}},
+{{/shapes}}
+}

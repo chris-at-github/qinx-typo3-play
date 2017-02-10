@@ -1,0 +1,13 @@
+lib.url {
+	home = TEXT
+	home.typolink {
+		parameter = {$pages.home}
+		returnLast = url
+	}
+
+	search = TEXT
+	search.typolink {
+		parameter = {$pages.search}
+		returnLast = url
+	}
+}

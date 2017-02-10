@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'mixins';
+@import 'normalize';
+@import 'scaffolding';
+
+p.text-left, div.text-left,
+p.text-right, div.text-right,
+p.text-center, div.text-center, h1.text-center, h2.text-center, h3.text-center, h4.text-center,
+p.text-small, div.text-small {
+	/*! sass ignore */
+}
+
+p.h1, div.h1, h2.h1, h3.h1, h4.h1 {
+	/*! sass ignore */
+}
+
+span.text-small, span.text-small {
+	/*! sass ignore */
+}
